@@ -1,0 +1,42 @@
+{
+    "name": "dos/craft-yt-thumbs",
+    "description": "Use YouTube Data API to get video thumbnail from video URL",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft yt thumbs"
+    ],
+    "support": {
+        "docs": "https://github.com/sampsonpete/craft-yt-thumbs/blob/master/README.md",
+        "issues": "https://github.com/sampsonpete/craft-yt-thumbs/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pete Sampson",
+            "homepage": "https://dos.studio"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "google/apiclient": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+          "dos\\craftytthumbs\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft YT Thumbs",
+        "handle": "craft-yt-thumbs",
+        "developer": "Pete Sampson",
+        "developerUrl": "https://dos.studio",
+        "documentationUrl": "https://github.com/sampsonpete/craft-yt-thumbs/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/sampsonpete/craft-yt-thumbs/master/CHANGELOG.md",
+        "class": "dos\\craftytthumbs\\CraftYtThumbs"
+    }
+}

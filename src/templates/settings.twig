@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * craft-yt-thumbs plugin for Craft CMS 3.x
+ *
+ * craft-yt-thumbs Settings.twig
+ *
+ * @author    Pete Sampson
+ * @copyright Copyright (c) 2020 Pete Sampson
+ * @link      https://dos.studio
+ * @package   Craftytthumbs
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("dos\\craftytthumbs\\assetbundles\\craftytthumbs\\CraftytthumbsAsset") %}
+
+{{ forms.textField({
+    label: 'API key',
+    instructions: 'Enter your developer key to authenticate the plugin with the YouTube Data API',
+    id: 'apiKey',
+    name: 'apiKey',
+    value: settings['apiKey']})
+}}

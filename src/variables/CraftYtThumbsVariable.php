@@ -2,7 +2,7 @@
 /**
  * Craft YT Thumbs plugin for Craft CMS 3.x
  *
- * Use YouTube Data API to get video thumbnail from video URL
+ * Use the YouTube Data API to get video thumbnail from video URL
  *
  * @link      https://dos.studio
  * @copyright Copyright (c) 2020 Pete Sampson
@@ -51,26 +51,36 @@ class CraftYtThumbsVariable
      */
     public function getYtThumbnail($url)
     {
-        // Build the client object
-        $client = new Google_Client();
-        $client->setApplicationName('Craft_YT_Thumbs');
-        $client->setDeveloperKey('AIzaSyBvq7QPTH1mgV7U9ohnnUwYYGFb3IR72oA');
+        // Get the API key from settings
+        $apiKey = \dos\craftytthumbs\CraftYtThumbs::getInstance()->getSettings()->apiKey;
 
-        // Build the service object
-        $service = new Google_Service_YouTube($client);
+        // Check if the API key has been entered
+        if (empty($apiKey)) {
 
-        // Get video ID from URL
-        $id = str_replace('https://www.youtube.com/watch?v=', '', $url);
+          return null;
 
-        // Get thumbnail from YouTube Data API
-        $queryParams = [
-            'id' => $id
-        ];
+        } else {
+          // Build the client object
+          $client = new Google_Client();
+          $client->setApplicationName('Craft_YT_Thumbs');
+          $client->setDeveloperKey($apiKey);
 
-        $response = $service->videos->listVideos('snippet,contentDetails,statistics', $queryParams);
+          // Build the service object
+          $service = new Google_Service_YouTube($client);
 
-        $thumb = $response->items[0]->snippet->thumbnails->high->url;
+          // Get video ID from URL
+          $id = str_replace('https://www.youtube.com/watch?v=', '', $url);
 
-        return $thumb;
+          // Get thumbnail from YouTube Data API
+          $queryParams = [
+              'id' => $id
+          ];
+
+          $response = $service->videos->listVideos('snippet,contentDetails,statistics', $queryParams);
+
+          $thumb = $response->items[0]->snippet->thumbnails->high->url;
+
+          return $thumb;
+        }
     }
 }

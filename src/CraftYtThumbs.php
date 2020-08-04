@@ -2,7 +2,7 @@
 /**
  * Craft YT Thumbs plugin for Craft CMS 3.x
  *
- * Use YouTube Data API to get video thumbnail from video URL
+ * Use the YouTube Data API to get video thumbnail from video URL
  *
  * @link      https://dos.studio
  * @copyright Copyright (c) 2020 Pete Sampson
@@ -69,7 +69,7 @@ class CraftYtThumbs extends Plugin
      *
      * @var bool
      */
-    public $hasCpSettings = false;
+    public $hasCpSettings = true;
 
     /**
      * Set to `true` if the plugin should have its own section (main nav item) in the control panel.
@@ -150,4 +150,29 @@ class CraftYtThumbs extends Plugin
     // Protected Methods
     // =========================================================================
 
+    /**
+     * Creates and returns the model used to store the plugin’s settings.
+     *
+     * @return \craft\base\Model|null
+     */
+    protected function createSettingsModel()
+    {
+        return new \dos\craftytthumbs\models\Settings();
+    }
+
+    /**
+     * Returns the rendered settings HTML, which will be inserted into the content
+     * block on the settings page.
+     *
+     * @return string The rendered settings HTML
+     */
+    protected function settingsHtml(): string
+    {
+        return Craft::$app->view->renderTemplate(
+            'craft-yt-thumbs/settings',
+            [
+                'settings' => $this->getSettings()
+            ]
+        );
+    }
 }

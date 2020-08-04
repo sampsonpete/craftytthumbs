@@ -1,6 +1,6 @@
 {
     "name": "dos/craft-yt-thumbs",
-    "description": "Use YouTube Data API to get video thumbnail from video URL",
+    "description": "Use the YouTube Data API to get video thumbnail from video URL",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
@@ -8,7 +8,10 @@
         "cms",
         "craftcms",
         "craft-plugin",
-        "craft yt thumbs"
+        "craft yt thumbs",
+        "youtube",
+        "thumbnail",
+        "thubmnails"
     ],
     "support": {
         "docs": "https://github.com/sampsonpete/craft-yt-thumbs/blob/master/README.md",
@@ -22,6 +25,7 @@
         }
     ],
     "require": {
+        "php": "^7.2",
         "craftcms/cms": "^3.0.0",
         "google/apiclient": "^2.7"
     },

@@ -2,7 +2,7 @@
 /**
  * Craft YT Thumbs plugin for Craft CMS 3.x
  *
- * Use YouTube Data API to get video thumbnail from video URL
+ * Use the YouTube Data API to get video thumbnail from video URL
  *
  * @link      https://dos.studio
  * @copyright Copyright (c) 2020 Pete Sampson

@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2020 Pete Sampson
  */
 
-namespace dos\craftytthumbs\variables;
+namespace dosstudio\craftytthumbs\variables;
 
-use dos\craftytthumbs\CraftYtThumbs;
+use dosstudio\craftytthumbs\CraftYtThumbs;
 
 use Craft;
 
@@ -52,7 +52,7 @@ class CraftYtThumbsVariable
     public function getYtThumbnail($url)
     {
         // Get the API key from settings
-        $apiKey = \dos\craftytthumbs\CraftYtThumbs::getInstance()->getSettings()->apiKey;
+        $apiKey = \dosstudio\craftytthumbs\CraftYtThumbs::getInstance()->getSettings()->apiKey;
 
         // Check if the API key has been entered
         if (empty($apiKey)) {

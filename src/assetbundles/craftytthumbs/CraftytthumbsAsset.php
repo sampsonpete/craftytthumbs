@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2020 Pete Sampson
  */
 
-namespace dos\craftytthumbs\assetbundles\craftytthumbs;
+namespace dosstudio\craftytthumbs\assetbundles\craftytthumbs;
 
 use Craft;
 use craft\web\AssetBundle;
@@ -43,7 +43,7 @@ class CraftytthumbsAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@dos/craftytthumbs/assetbundles/craftytthumbs/dist";
+        $this->sourcePath = "@dosstudio/craftytthumbs/assetbundles/craftytthumbs/dist";
 
         // define the dependencies
         $this->depends = [

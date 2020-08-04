@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2020 Pete Sampson
  */
 
-namespace dos\craftytthumbs;
+namespace dosstudio\craftytthumbs;
 
-use dos\craftytthumbs\variables\CraftYtThumbsVariable;
+use dosstudio\craftytthumbs\variables\CraftYtThumbsVariable;
 
 use Craft;
 use craft\base\Plugin;
@@ -157,7 +157,7 @@ class CraftYtThumbs extends Plugin
      */
     protected function createSettingsModel()
     {
-        return new \dos\craftytthumbs\models\Settings();
+        return new \dosstudio\craftytthumbs\models\Settings();
     }
 
     /**

@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2020 Pete Sampson
  */
 
-namespace dos\craftytthumbs\models;
+namespace dosstudio\craftytthumbs\models;
 
-use dos\craftytthumbs\Craftytthumbs;
+use dosstudio\craftytthumbs\Craftytthumbs;
 
 use Craft;
 use craft\base\Model;

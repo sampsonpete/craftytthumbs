@@ -20,12 +20,6 @@ use craft\web\twig\variables\CraftVariable;
 
 use yii\base\Event;
 
-// Load Composer's autoloader
-$base = dirname(__DIR__, 1);
-define('PLUGIN_BASE_PATH', $base);
-define('PLUGIN_VENDOR_PATH', PLUGIN_BASE_PATH.'/vendor');
-require_once PLUGIN_VENDOR_PATH.'/autoload.php';
-
 /**
  * Craft plugins are very much like little applications in and of themselves. We’ve made
  * it as simple as we can, but the training wheels are off. A little prior knowledge is

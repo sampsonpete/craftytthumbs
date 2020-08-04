@@ -2,7 +2,7 @@
     "name": "dosstudio/craft-yt-thumbs",
     "description": "Use the YouTube Data API to get video thumbnail from video URL",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "keywords": [
         "craft",
         "cms",
